@@ -74,7 +74,7 @@ LineGuard/
 
 ### 1. Клонирование проекта
 ```bash
-git clone https://github.com/Alextimka/LineGuard
+git clone Alextimka/LineGuard
 cd LineGuard
 ```
 
@@ -98,10 +98,7 @@ source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
-### 4. Проверка модели
-Убедитесь, что файл модели `model/LineGuard.pt` присутствует в проекте. Это обученная YOLO модель для детекции компонентов линий электропередач.
-
-## Запуск приложения
+### 4. Запуск приложения
 
 ### Режим разработки
 ```bash
@@ -124,7 +121,7 @@ npm start
 - **Drag & Drop**: Перетащите изображения в область загрузки
 - **Выбор файлов**: Нажмите на область загрузки для выбора файлов
 - **Поддерживаемые форматы**: JPG, JPEG, PNG, TIFF, BMP
-- **Ограничение размера**: Максимум 10MB на файл
+- **Ограничение размера**: Максимум 10Gb на файл
 
 ### 3. Обработка изображений
 - Система автоматически обработает загруженные изображения
@@ -185,7 +182,7 @@ npm start
 ### YOLO Detection (Python)
 - **Файл**: `yolo_detector.py`
 - **Библиотека**: Ultralytics YOLOv8
-- **Модель**: `model/LineGuard.pt` c mAP@0.5 - 0.76
+- **Модель**: `model/LineGuard.pt` mAP@0.5 - 0.76
 - **Производительность**: Обработка на CPU, таймаут 30 секунд
 
 ### Frontend (HTML/CSS/JavaScript)
