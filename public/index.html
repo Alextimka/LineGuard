@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LineGuard - Power Line Inspection</title>
+    <link rel="shortcut icon" href="images/logo.png" type="image/png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Compact Header -->
+    <div class="app-header-compact">
+        <img src="images/logo.png" alt="LineGuard Logo" class="header-logo">
+        <h1><span class="logo-half-1">Line</span><span class="logo-half-2">Guard</span></h1>
+    </div>
+
+    <!-- Main Application Area -->
+    <div class="app-main">
+        <!-- Back Button (initially hidden) -->
+        <button id="backButton" class="back-btn" style="display: none;">
+            <span>←</span> Назад к списку
+        </button>
+        
+
+        
+        <!-- Left Panel - Image Upload and Display -->
+        <div class="left-panel">
+            <!-- Upload Area (always visible) -->
+            <div class="upload-section">
+                <div class="drop-zone" id="dropZone">
+                    <div class="drop-zone-content">
+                        <img src="images/upload.png" alt="Upload Icon" class="drop-zone-icon">
+                        <h3>Перетащите изображения сюда</h3>
+                        <p>или нажмите для выбора файлов</p>
+                    </div>
+                </div>
+                
+                <input type="file" id="fileInput" class="file-input" accept=".jpg, .jpeg, .png, .tiff, .bmp" multiple>
+            </div>
+            
+            <!-- Single Image View -->
+            <div class="image-view-section" id="imageViewSection" style="display: none;">
+                <button id="closeImageBtn" class="close-image-btn">
+                    ✕
+                </button>
+                <img id="uploadedImage" class="uploaded-image" alt="Uploaded image">
+                <canvas id="detectionOverlay" class="detection-overlay"></canvas>
+            </div>
+            
+            <!-- Loading -->
+            <div class="loading" id="loading">
+                <div class="spinner"></div>
+                <p>Обработка изображений системой LineGuard...</p>
+            </div>
+        </div>
+
+        <!-- Right Panel - Photos List and Results -->
+        <div class="right-panel">
+            <!-- Photos List Section -->
+            <div class="photos-section" id="photosSection" style="display: none;">
+                <div class="section-header">
+                    <h3>Загруженные изображения</h3>
+                    <button id="clearAllBtn" class="clear-all-btn">
+                        <span class="toggle-text">Очистить все</span>
+                    </button>
+                </div>
+                <div class="photos-scroll-area">
+                    <div class="photos-list" id="photosList">
+                        <!-- Photos will be populated here -->
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Detection Results View -->
+            <div class="results-section" id="detectionResultsView" style="display: none;">
+                <div class="section-header">
+                    <h3>Загруженные изображения</h3>
+                    <button id="toggleDamagedOnly" class="clear-all-btn">
+                        <span class="toggle-text">Только поврежденные</span>
+                    </button>
+                </div>  
+                <div class="detections-list" id="detectionsList">
+                    <!-- Detection results will be populated here -->
+                </div>
+
+                <div class="error-message" id="errorMessage"></div>
+            </div>
+            
+            <!-- Empty State View -->
+            <div class="results-section" id="emptyStateView">
+                <h2>Загруженные изображения</h2>
+                <p>Выберите изображение слева для просмотра деталей</p>
+                <div class="error-message" id="errorMessage"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

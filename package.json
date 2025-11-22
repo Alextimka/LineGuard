@@ -1,0 +1,33 @@
+{
+  "name": "lineguard",
+  "version": "1.0.0",
+  "description": "LineGuard - YOLO-based line detection and monitoring system",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "keywords": [
+    "line-guard",
+    "yolo",
+    "object-detection",
+    "line-detection",
+    "nodejs",
+    "express",
+    "machine-learning",
+    "computer-vision"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "multer": "^1.4.5-lts.1",
+    "cors": "^2.8.5"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.2"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}
