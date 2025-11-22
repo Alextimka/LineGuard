@@ -1,6 +1,6 @@
 # LineGuard - Система инспекции линий электропередач
 
-![LineGuard Logo](public/images/logo.png)
+<img src="https://github.com/Alextimka/LineGuard/blob/main/public/images/logo.png" width="150" />
 
 ## Описание проекта
 
@@ -49,7 +49,7 @@ LineGuard/
 │   └── fonts/                 # Шрифты (Comfortaa.ttf)
 ├── model/                     # Модели машинного обучения
 │   └── LineGuard.pt           # Обученная YOLO модель
-├── uploads/                   # Временная папка для загруженных файлов
+└── uploads/                   # Временная папка для загруженных файлов
 ```
 
 ## Требования к системе
